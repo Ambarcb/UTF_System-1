@@ -1,5 +1,5 @@
 UTF_system/Views/* linguist-vendored
 UTF_system/Scripts/* linguist-vendored
 UTF_system/Content/* linguist-vendored
-UTF_system/style* linguist-vendored
-UTF_system/styles* linguist-vendored
+UTF_system/style/* linguist-vendored
+UTF_system/styles/* linguist-vendored

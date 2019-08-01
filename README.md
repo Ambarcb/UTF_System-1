@@ -17,7 +17,7 @@ git clone https://github.com/syned13/UTF_System.git
 ## Prerequirements
 
 * Visual Studio 2017 or newer
-* .NET Core SDK
+* ASP.NET SDK
 * SQL Server
 
 ## How To Run

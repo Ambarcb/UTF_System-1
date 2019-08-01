@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "Asignaturas";
+}
+
+<head>
+    <!-- Favicons -->
+    <link href="~/Content/img/favicons/favicon1.png" rel="icon">
+    <link href="~/Content/img/favicons/favicon2.png" rel="icon">
+    <link href="~/Content/img/favicons/favicon3.png" rel="icon">
+    <link href="/Content/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="/Content/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Librerías CSS  -->
+    <link href="/Content/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/Content/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/Content/lib/venobox/venobox.css" rel="stylesheet">
+    <link href="/Content/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="/Content/css/style/style.css" rel="stylesheet">
+
+    <title>Listado de asignaturas</title>
+</head>
+
+<!--==========================
+  Header
+============================-->
+
+<div class="container-fluid">
+    <div class="row bg-dark">
+        <div class="col-10">
+            <a class="navbar-brand m-2" href="/Estudiantes">
+                <img src="../../Content/img/logo.png" height="50">
+            </a>
+        </div>
+        <div class="col my-auto">
+            <a class="btn btn-outline-light" href="/Estudiantes" role="button">Home</a>
+            <a class="btn btn-outline-light " href="/Admin/Logout" role="button">Cerrar sesión</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid" style="margin-top:4%;">
+    <h1><font face="Tahoma">Asignaturas inscritas</font></h1>
+
+    <table id="estudiantes_table text-center" class="table table-striped table-bordered table-sm" style="margin-top:2%;" cellspacing="0" width="100%">
+        <thead>
+            <tr class="d-flex">
+                <th class="col-sm-4 text-center">Clave</th>
+                <th class="col-sm-4 text-center">Nombre completo</th>
+                <th class="col-sm-4 text-center">Créditos</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var calificacion in ViewBag.calificaciones)
+            {
+                <tr class="d-flex">
+                    <td class="col-sm-4 text-center align-middle">@calificacion.Asignatura.Clave</td>
+                    <td class="col-sm-4 text-center align-middle">@calificacion.Asignatura.Nombre </td>
+                    <td class="col-sm-4 text-center align-middle">@calificacion.Asignatura.Creditos</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
+
+
+<!-- JavaScript Libraries -->
+<script src="/Content/lib/jquery/jquery.min.js"></script>
+<script src="/Content/lib/jquery/jquery-migrate.min.js"></script>
+<script src="/Content/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/Content/lib/easing/easing.min.js"></script>
+<script src="/Content/lib/superfish/hoverIntent.js"></script>
+<script src="/Content/lib/superfish/superfish.min.js"></script>
+<script src="/Content/lib/wow/wow.min.js"></script>
+<script src="/Content/lib/venobox/venobox.min.js"></script>
+<script src="/Content/lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Contact Form JavaScript File -->
+<script src="/Content/contactform/contactform.js"></script>
+
+<!-- Template Main Javascript File -->
+<script src="/Content/js/main.js"></script>

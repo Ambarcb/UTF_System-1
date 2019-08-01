@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "ModificarAsignatura";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Content/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+    <link href="~/Content/img/favicons/favicon1.png" rel="icon">
+    <link href="~/Content/img/favicons/favicon2.png" rel="icon">
+    <link href="~/Content/img/favicons/favicon3.png" rel="icon">
+    <link rel="stylesheet" href="/Content/css/main.css">
+
+
+
+    <title>Registrar asignatura</title>
+</head>
+
+<body>
+
+    <!--==========================
+      Header
+    ============================-->
+
+    <ul>
+        <li class="logo"> <a href="/Admin"><img src="~/Content/img/logo.png" /></li></a>
+        <li class="navbar_option"><a href="/Admin/Logout">Cerrar sesión</a></li>
+        <li class="navbar_option"><a href="/Admin">Home</a></li>
+
+    </ul>
+
+    <div class="container_custom">
+        <div class="form__top">
+            <h2> <span>Modificar asignatura @ViewBag.asignatura.Clave</span></h2>
+        </div>
+        <form class="form__reg" onsubmit="return confirm('¿Estás seguro de los cambios?');" action="@Url.Action("ModificarAsignatura", "Admin")" method="post">
+
+            <input class="input" name="nombre" type="text" placeholder="&#128221;  @ViewBag.asignatura.Nombre" required autofocus>
+            <input class="input" name="Creditos" type="text" placeholder="&#128091; @ViewBag.asignatura.Creditos Créditos" required>
+            <input type="hidden"  name="clave" value="@ViewBag.asignatura.Clave">
+            <div>
+                @ViewBag.message
+            </div>
+
+            <div class="btn__form">
+                <input class="btn__submit" type="submit" value="MODIFICAR">
+                <input class="btn__reset" type="reset" value="LIMPIAR">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
